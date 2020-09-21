@@ -1,0 +1,16 @@
+<html>
+    <head>
+    <title>Daftar Pegawai</title>
+    </head>
+    <body>
+        <% pegawais.forEach(i => { %>
+            <div>
+                <h1><%= i.nama %></h1>
+                <p><%= i.status %></p>
+                <p><%= i.jabatan %></p>
+                <p>ID = <%= i.id %></p>
+                <!-- <a href="/pegawais/<%= i.id %>">Baca lebih lanjut!</a> -->
+            </div>
+        <% }) %>
+    </body>
+</html>

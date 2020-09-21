@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Pegawai | Update</title>
+    </head>
+    <body>
+        <p>Update Player ID <%= id %></p>
+        <form method="PUT" action="/pegawais/<%= id %>">
+            <label for="nama">Nama</label>
+            <br>
+            <input type="text" name="nama"/>
+            <br>
+            <label for="status">Status</label>
+            <br>
+            <input type="text" name="status"/>
+            <br>
+            <label for="jabatan">Jabatan</label>
+            <br>
+            <input type="text" name="jabatan"/>
+            <br>
+            <button type="submit">UPDATE</button>
+        </form>
+    </body>
+</html>
