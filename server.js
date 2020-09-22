@@ -55,7 +55,7 @@ app.get('/pegawais/create', (req, res) => {
   })
 
 // PUT an pegawai
-app.put('/pegawais/:id', (req, res) => {
+app.put('/pegawais', (req, res) => {
   Pegawai.update({
     nama: req.body.nama,
     status: req.body.status,
@@ -86,6 +86,18 @@ app.get('/pegawais/update/:id', (req, res) => {
 //   })
 //   .then(() => console.log("Hapus data berhasil"))
 
+// menampilkan login
+app.get('/login', (req, res) => {
+  res.render('login')
+})
+
+app.post('/login', (req, res) => {
+  if (req.body.username === 'admin' && req.body.password === 'admin') {
+      res.render('home')
+  } else {
+      res.status(401).send({'message': 'unauthorized'})
+  }
+})
 
 app.listen(PORT, () => {
     console.log(`Listening on http://localhost:${PORT}`)
